@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>乾坤微前端</title>
+</head>
+
+<body>
+  <div class="mainapp">
+    <div class="mainapp-menu">
+      <span onclick="push('/react16')">React16</span>
+      <span onclick="push('/react15')">React15</span>
+      <span onclick="push('/vue')">Vue</span>
+      <span onclick="push('/vue3')">Vue3</span>
+      <span onclick="push('/angular9')">Angular9</span>
+      <span onclick="push('/purehtml')">Purehtml</span>
+    </div>
+    <!-- 子应用  -->
+    <main id="subapp-container"></main>
+  </div>
+
+  <script>
+    function push(subapp) { history.pushState(null, subapp, subapp) }
+  </script>
+</body>
+
+</html>
